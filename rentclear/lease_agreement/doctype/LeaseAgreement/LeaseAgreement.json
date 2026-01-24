@@ -1,0 +1,20 @@
+{
+ "allow_copy": 1,
+ "custom": 0,
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "fields": [
+  {"fieldname": "property", "fieldtype": "Link", "label": "Property", "options": "Property", "reqd": 1},
+  {"fieldname": "property_unit", "fieldtype": "Link", "label": "Property Unit", "options": "Property Unit", "reqd": 1},
+  {"fieldname": "tenant", "fieldtype": "Link", "label": "Tenant", "options": "Customer", "reqd": 1},
+  {"fieldname": "start_date", "fieldtype": "Date", "label": "Start Date", "reqd": 1},
+  {"fieldname": "end_date", "fieldtype": "Date", "label": "End Date"},
+  {"fieldname": "rent_amount", "fieldtype": "Currency", "label": "Rent Amount", "reqd": 1},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Draft\nActive\nExpired"}
+ ],
+ "is_submittable": 1,
+ "module": "Rentclear",
+ "name": "Lease Agreement",
+ "permissions": [{"create": 1, "delete": 1, "read": 1, "role": "System Manager", "submit": 1, "write": 1}]
+}

@@ -1,0 +1,303 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-24 17:02:15.653708",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_7sun",
+  "maint_request_id",
+  "property",
+  "column_break_cfbm",
+  "prop_owner",
+  "property_unit",
+  "section_break_gcke",
+  "reported_by",
+  "tenant_request_no",
+  "column_break_iabq",
+  "requests_since_onboarding",
+  "section_break_eghc",
+  "issue_type",
+  "priority",
+  "subject",
+  "column_break_ltbp",
+  "description",
+  "amended_from",
+  "subscription_info_section",
+  "is_under_subscription",
+  "auto_deduct",
+  "subscription_plan",
+  "column_break_rbdc",
+  "estimated_cost",
+  "deduct_amount",
+  "owner_approval_section",
+  "owner_approval_required",
+  "owner_approval_status",
+  "approved_by",
+  "column_break_axvn",
+  "approved_date",
+  "approval_notes",
+  "assigned_and_status_section",
+  "assigned_to",
+  "property_manager",
+  "status",
+  "column_break_xtbm",
+  "reported_date",
+  "resolution_date",
+  "actual_cost",
+  "analytics_section",
+  "resolution_hours",
+  "tenant_satisfaction"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_7sun",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fieldname": "property_unit",
+   "fieldtype": "Link",
+   "label": "Property Unit",
+   "options": "Property Unit"
+  },
+  {
+   "fieldname": "prop_owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "maint_request_id",
+   "fieldtype": "Data",
+   "label": "Request ID",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_gcke",
+   "fieldtype": "Section Break",
+   "label": "Tenant Info"
+  },
+  {
+   "fieldname": "reported_by",
+   "fieldtype": "Link",
+   "label": "Reported By",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_cfbm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenant_request_no",
+   "fieldtype": "Int",
+   "label": "Tenant Request No"
+  },
+  {
+   "fieldname": "column_break_iabq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "requests_since_onboarding",
+   "fieldtype": "Int",
+   "label": "Requests since Onboarding"
+  },
+  {
+   "fieldname": "section_break_eghc",
+   "fieldtype": "Section Break",
+   "label": "Request Details"
+  },
+  {
+   "fieldname": "issue_type",
+   "fieldtype": "Select",
+   "label": "Issue Type",
+   "options": "Electrical\nPlumbing\nStructural\nPaint"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nEmergency"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "column_break_ltbp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Maintenance Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "subscription_info_section",
+   "fieldtype": "Section Break",
+   "label": "Subscription Info"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_under_subscription",
+   "fieldtype": "Check",
+   "label": "Is Under Subscription"
+  },
+  {
+   "fieldname": "subscription_plan",
+   "fieldtype": "Data",
+   "label": "Subscription Plan"
+  },
+  {
+   "fieldname": "column_break_rbdc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Cost Estimate"
+  },
+  {
+   "fieldname": "owner_approval_section",
+   "fieldtype": "Section Break",
+   "label": "Owner Approval"
+  },
+  {
+   "default": "0",
+   "fieldname": "owner_approval_required",
+   "fieldtype": "Check",
+   "label": "Owner Approval Required"
+  },
+  {
+   "fieldname": "owner_approval_status",
+   "fieldtype": "Select",
+   "label": "Owner Approval Status",
+   "options": "Pending\nApproved\nRejected"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_axvn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_date",
+   "fieldtype": "Date",
+   "label": "Approved Date"
+  },
+  {
+   "fieldname": "approval_notes",
+   "fieldtype": "Small Text",
+   "label": "Approved Notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_deduct",
+   "fieldtype": "Check",
+   "label": "Auto Deduct from Deposit/Rent"
+  },
+  {
+   "fieldname": "deduct_amount",
+   "fieldtype": "Currency",
+   "label": "Deduct Amount"
+  },
+  {
+   "fieldname": "assigned_and_status_section",
+   "fieldtype": "Section Break",
+   "label": "Assigned and Status"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned to",
+   "options": "User"
+  },
+  {
+   "fieldname": "property_manager",
+   "fieldtype": "Link",
+   "label": "Property Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Progress\nResolved\nEscalated\nOwner Self Resolution"
+  },
+  {
+   "fieldname": "column_break_xtbm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reported_date",
+   "fieldtype": "Date",
+   "label": "Reported Date"
+  },
+  {
+   "fieldname": "resolution_date",
+   "fieldtype": "Date",
+   "label": "Resolution Date"
+  },
+  {
+   "fieldname": "actual_cost",
+   "fieldtype": "Currency",
+   "label": "Actual Cost"
+  },
+  {
+   "fieldname": "analytics_section",
+   "fieldtype": "Section Break",
+   "label": "Analytics"
+  },
+  {
+   "fieldname": "resolution_hours",
+   "fieldtype": "Float",
+   "label": "Resolution Hours"
+  },
+  {
+   "fieldname": "tenant_satisfaction",
+   "fieldtype": "Select",
+   "label": "Tenant Satisfaction",
+   "options": "1\n2\n3\n4\n5"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-24 18:11:30.071960",
+ "modified_by": "Administrator",
+ "module": "Rentclear",
+ "name": "Maintenance Request",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

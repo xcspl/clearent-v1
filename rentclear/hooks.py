@@ -11,15 +11,15 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "rentclear",
-# 		"logo": "/assets/rentclear/logo.png",
-# 		"title": "Rentclear",
-# 		"route": "/rentclear",
-# 		"has_permission": "rentclear.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "rentclear",
+		"logo": "/assets/rentclear/images/logo.svg",
+		"title": "Rentclear",
+		"route": "/app/rentclear",
+		"has_permission": "rentclear.api.permission.has_app_permission"
+	}
+]
 
 # Includes in <head>
 # ------------------
@@ -247,3 +247,12 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+home_page = "rentclear"
+
+# Home Page
+home_page = "rentclear"
+
+# Pages
+pages = [
+	{"name": "rentclear", "page_name": "home", "title": "Rentclear"}
+]

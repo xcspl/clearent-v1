@@ -1,0 +1,364 @@
+{
+,"custom": 1
+ "actions": [],
+,"custom": 1
+ "allow_events_in_timeline": 0,
+,"custom": 1
+ "allow_copy": 1,
+,"custom": 1
+ "allow_guest_to_view": 0,
+,"custom": 1
+ "allow_import": 1,
+,"custom": 1
+ "allow_rename": 1,
+,"custom": 1
+ "autoname": "PROP-.####",
+,"custom": 1
+ "created_on": "2024-01-22",
+,"custom": 1
+ "doctype": "DocType",
+,"custom": 1
+ "document_type": "Document",
+,"custom": 1
+ "engine": "InnoDB",
+,"custom": 1
+ "fields": [
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "property_section",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Property Information"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "property_code",
+,"custom": 1
+   "fieldtype": "Data",
+,"custom": 1
+   "label": "Property Code",
+,"custom": 1
+   "read_only": 1,
+,"custom": 1
+   "reqd": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "property_name",
+,"custom": 1
+   "fieldtype": "Data",
+,"custom": 1
+   "in_list_view": 1,
+,"custom": 1
+   "label": "Property Name",
+,"custom": 1
+   "reqd": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "address",
+,"custom": 1
+   "fieldtype": "Link",
+,"custom": 1
+   "label": "Address",
+,"custom": 1
+   "options": "Address"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "property_type",
+,"custom": 1
+   "fieldtype": "Select",
+,"custom": 1
+   "label": "Property Type",
+,"custom": 1
+   "options": "Residential\nCommercial\nMixed\nIndustrial"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "status",
+,"custom": 1
+   "fieldtype": "Select",
+,"custom": 1
+   "label": "Status",
+,"custom": 1
+   "options": "Available\nPartially Occupied\nFully Occupied\nMaintenance\nInactive",
+,"custom": 1
+   "default": "Available"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "property_details",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Property Details"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "total_units",
+,"custom": 1
+   "fieldtype": "Int",
+,"custom": 1
+   "label": "Total Units"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "total_area",
+,"custom": 1
+   "fieldtype": "Float",
+,"custom": 1
+   "label": "Total Area (sq ft)"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "year_built",
+,"custom": 1
+   "fieldtype": "Year",
+,"custom": 1
+   "label": "Year Built"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "amenities",
+,"custom": 1
+   "fieldtype": "Text",
+,"custom": 1
+   "label": "Amenities"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "description": "Property description and features",
+,"custom": 1
+   "fieldname": "description",
+,"custom": 1
+   "fieldtype": "Text",
+,"custom": 1
+   "label": "Description"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "owner_section",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Owner Information"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "owner",
+,"custom": 1
+   "fieldtype": "Link",
+,"custom": 1
+   "label": "Owner",
+,"custom": 1
+   "options": "Customer",
+,"custom": 1
+   "reqd": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "owner_commission",
+,"custom": 1
+   "fieldtype": "Percent",
+,"custom": 1
+   "label": "Owner Commission %"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "property_manager_section",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Property Manager"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "property_manager",
+,"custom": 1
+   "fieldtype": "Link",
+,"custom": 1
+   "label": "Property Manager",
+,"custom": 1
+   "options": "User"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "manager_assigned_on",
+,"custom": 1
+   "fieldtype": "Date",
+,"custom": 1
+   "label": "Manager Assignment Date"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "analytics_section",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Analytics & Performance"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "occupancy_rate",
+,"custom": 1
+   "fieldtype": "Percent",
+,"custom": 1
+   "label": "Occupancy Rate",
+,"custom": 1
+   "read_only": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "avg_rent_sqft",
+,"custom": 1
+   "fieldtype": "Currency",
+,"custom": 1
+   "label": "Average Rent per SqFt",
+,"custom": 1
+   "read_only": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "maintenance_cost_ytd",
+,"custom": 1
+   "fieldtype": "Currency",
+,"custom": 1
+   "label": "Maintenance Cost YTD",
+,"custom": 1
+   "read_only": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "last_maintenance_date",
+,"custom": 1
+   "fieldtype": "Date",
+,"custom": 1
+   "label": "Last Maintenance Date",
+,"custom": 1
+   "read_only": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "total_maintenance_count",
+,"custom": 1
+   "fieldtype": "Int",
+,"custom": 1
+   "label": "Total Maintenance Requests",
+,"custom": 1
+   "read_only": 1
+,"custom": 1
+  }
+,"custom": 1
+ ],
+,"custom": 1
+ "hide_toolbar": 0,
+,"custom": 1
+ "idx": 0,
+,"custom": 1
+ "is_submittable": 0,
+,"custom": 1
+ "links": [],
+,"custom": 1
+ "modified": "2024-01-22",
+,"custom": 1
+ "module": "Rentclear",
+,"custom": 1
+ "name": "Property",
+,"custom": 1
+ "naming_rule": "Expression",
+,"custom": 1
+ "owner": "Administrator",
+,"custom": 1
+ "permissions": [
+,"custom": 1
+  {
+,"custom": 1
+   "create": 1,
+,"custom": 1
+   "delete": 1,
+,"custom": 1
+   "email": 1,
+,"custom": 1
+   "export": 1,
+,"custom": 1
+   "print": 1,
+,"custom": 1
+   "read": 1,
+,"custom": 1
+   "report": 1,
+,"custom": 1
+   "role": "System Manager",
+,"custom": 1
+   "share": 1,
+,"custom": 1
+   "write": 1
+,"custom": 1
+  }
+,"custom": 1
+ ],
+,"custom": 1
+ "quick_entry": 1,
+,"custom": 1
+ "sort_field": "modified",
+,"custom": 1
+ "sort_order": "DESC",
+,"custom": 1
+ "title_field": "property_name",
+,"custom": 1
+ "track_changes": 1,
+,"custom": 1
+ "track_seen": 0,
+,"custom": 1
+ "track_views": 1
+,"custom": 1
+}
+,"custom": 1

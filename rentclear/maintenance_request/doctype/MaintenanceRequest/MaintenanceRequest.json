@@ -1,0 +1,16 @@
+{
+ "custom": 0,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "fields": [
+  {"fieldname": "property", "fieldtype": "Link", "label": "Property", "options": "Property"},
+  {"fieldname": "property_unit", "fieldtype": "Link", "label": "Property Unit", "options": "Property Unit"},
+  {"fieldname": "subject", "fieldtype": "Data", "label": "Subject", "reqd": 1},
+  {"fieldname": "description", "fieldtype": "Text", "label": "Description"},
+  {"fieldname": "priority", "fieldtype": "Select", "label": "Priority", "options": "Low\nMedium\nHigh"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Open\nIn Progress\nResolved", "default": "Open"}
+ ],
+ "module": "Rentclear",
+ "name": "Maintenance Request",
+ "permissions": [{"create": 1, "delete": 1, "read": 1, "write": 1, "role": "System Manager"}]
+}

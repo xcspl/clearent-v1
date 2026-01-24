@@ -1,0 +1,400 @@
+{
+,"custom": 1
+ "actions": [],
+,"custom": 1
+ "allow_events_in_timeline": 0,
+,"custom": 1
+ "allow_copy": 1,
+,"custom": 1
+ "allow_import": 1,
+,"custom": 1
+ "allow_rename": 1,
+,"custom": 1
+ "autoname": "UNIT-.####",
+,"custom": 1
+ "doctype": "DocType",
+,"custom": 1
+ "document_type": "Document",
+,"custom": 1
+ "engine": "InnoDB",
+,"custom": 1
+ "fields": [
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "unit_section",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Unit Information"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "unit_code",
+,"custom": 1
+   "fieldtype": "Data",
+,"custom": 1
+   "label": "Unit Code",
+,"custom": 1
+   "read_only": 1,
+,"custom": 1
+   "reqd": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "property",
+,"custom": 1
+   "fieldtype": "Link",
+,"custom": 1
+   "label": "Property",
+,"custom": 1
+   "options": "Property",
+,"custom": 1
+   "reqd": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fetch_from": "property.owner",
+,"custom": 1
+   "fieldname": "owner",
+,"custom": 1
+   "fieldtype": "Link",
+,"custom": 1
+   "label": "Owner",
+,"custom": 1
+   "options": "Customer",
+,"custom": 1
+   "read_only": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "unit_details",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Unit Details"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "unit_number",
+,"custom": 1
+   "fieldtype": "Data",
+,"custom": 1
+   "in_list_view": 1,
+,"custom": 1
+   "label": "Unit Number",
+,"custom": 1
+   "reqd": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "unit_type",
+,"custom": 1
+   "fieldtype": "Select",
+,"custom": 1
+   "label": "Unit Type",
+,"custom": 1
+   "options": "1BHK\n2BHK\n3BHK\n4BHK\nStudio\nOffice\nShop\nWarehouse\nOther"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "floor",
+,"custom": 1
+   "fieldtype": "Int",
+,"custom": 1
+   "label": "Floor"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "area",
+,"custom": 1
+   "fieldtype": "Float",
+,"custom": 1
+   "label": "Area (sq ft)"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "furnishing_status",
+,"custom": 1
+   "fieldtype": "Select",
+,"custom": 1
+   "label": "Furnishing Status",
+,"custom": 1
+   "options": "Fully Furnished\nSemi Furnished\nUnfurnished"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "amenities",
+,"custom": 1
+   "fieldtype": "Text",
+,"custom": 1
+   "label": "Amenities"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "financial_section",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Financial"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "rent_amount",
+,"custom": 1
+   "fieldtype": "Currency",
+,"custom": 1
+   "label": "Rent Amount"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "maintenance_charge",
+,"custom": 1
+   "fieldtype": "Currency",
+,"custom": 1
+   "label": "Maintenance Charge"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "security_deposit",
+,"custom": 1
+   "fieldtype": "Currency",
+,"custom": 1
+   "label": "Security Deposit"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "status_occupancy",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Status & Occupancy"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "status",
+,"custom": 1
+   "fieldtype": "Select",
+,"custom": 1
+   "in_list_view": 1,
+,"custom": 1
+   "label": "Status",
+,"custom": 1
+   "options": "Available\nOccupied\nReserved\nMaintenance",
+,"custom": 1
+   "default": "Available"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "current_tenant",
+,"custom": 1
+   "fieldtype": "Link",
+,"custom": 1
+   "label": "Current Tenant",
+,"custom": 1
+   "options": "Customer"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "current_lease",
+,"custom": 1
+   "fieldtype": "Link",
+,"custom": 1
+   "label": "Current Lease",
+,"custom": 1
+   "options": "Lease Agreement"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "property_manager_section",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Property Manager"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "property_manager",
+,"custom": 1
+   "fieldtype": "Link",
+,"custom": 1
+   "label": "Assigned Manager",
+,"custom": 1
+   "options": "User"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "analytics_section",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Analytics"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "days_vacant",
+,"custom": 1
+   "fieldtype": "Int",
+,"custom": 1
+   "label": "Days Vacant",
+,"custom": 1
+   "read_only": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "total_rental_income",
+,"custom": 1
+   "fieldtype": "Currency",
+,"custom": 1
+   "label": "Total Rental Income",
+,"custom": 1
+   "read_only": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "maintenance_count",
+,"custom": 1
+   "fieldtype": "Int",
+,"custom": 1
+   "label": "Maintenance Requests Count",
+,"custom": 1
+   "read_only": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "unit_health_score",
+,"custom": 1
+   "fieldtype": "Rating",
+,"custom": 1
+   "label": "Unit Health Score",
+,"custom": 1
+   "read_only": 1,
+,"custom": 1
+   "options": "1\n2\n3\n4\n5"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "maintenance_section",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Maintenance"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "active_maintenance",
+,"custom": 1
+   "fieldtype": "Link",
+,"custom": 1
+   "label": "Active Maintenance Request",
+,"custom": 1
+   "options": "Maintenance Request"
+,"custom": 1
+  }
+,"custom": 1
+ ],
+,"custom": 1
+ "is_submittable": 0,
+,"custom": 1
+ "links": [],
+,"custom": 1
+ "module": "Rentclear",
+,"custom": 1
+ "name": "Property Unit",
+,"custom": 1
+ "owner": "Administrator",
+,"custom": 1
+ "permissions": [
+,"custom": 1
+  {
+,"custom": 1
+   "create": 1,
+,"custom": 1
+   "delete": 1,
+,"custom": 1
+   "email": 1,
+,"custom": 1
+   "export": 1,
+,"custom": 1
+   "print": 1,
+,"custom": 1
+   "read": 1,
+,"custom": 1
+   "report": 1,
+,"custom": 1
+   "role": "System Manager",
+,"custom": 1
+   "share": 1,
+,"custom": 1
+   "write": 1
+,"custom": 1
+  }
+,"custom": 1
+ ],
+,"custom": 1
+ "quick_entry": 1,
+,"custom": 1
+ "sort_field": "modified",
+,"custom": 1
+ "sort_order": "DESC",
+,"custom": 1
+ "title_field": "unit_number",
+,"custom": 1
+ "track_changes": 1
+,"custom": 1
+}
+,"custom": 1

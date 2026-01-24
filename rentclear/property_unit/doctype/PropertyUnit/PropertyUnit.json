@@ -1,0 +1,18 @@
+{
+ "allow_copy": 1,
+ "custom": 0,
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "fields": [
+  {"fieldname": "property", "fieldtype": "Link", "label": "Property", "options": "Property", "reqd": 1},
+  {"fieldname": "unit_number", "fieldtype": "Data", "label": "Unit Number", "reqd": 1},
+  {"fieldname": "unit_type", "fieldtype": "Select", "label": "Unit Type", "options": "1BHK\n2BHK\n3BHK\nStudio"},
+  {"fieldname": "rent_amount", "fieldtype": "Currency", "label": "Rent Amount"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Available\nOccupied", "default": "Available"}
+ ],
+ "module": "Rentclear",
+ "name": "Property Unit",
+ "permissions": [{"create": 1, "delete": 1, "read": 1, "write": 1, "role": "System Manager"}],
+ "title_field": "unit_number"
+}

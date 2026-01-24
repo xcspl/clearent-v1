@@ -1,0 +1,200 @@
+{
+,"custom": 1
+ "actions": [],
+,"custom": 1
+ "allow_events_in_timeline": 0,
+,"custom": 1
+ "allow_copy": 1,
+,"custom": 1
+ "allow_import": 1,
+,"custom": 1
+ "allow_rename": 1,
+,"custom": 1
+ "doctype": "DocType",
+,"custom": 1
+ "document_type": "Document",
+,"custom": 1
+ "engine": "InnoDB",
+,"custom": 1
+ "fields": [
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "plan_section",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Plan Information"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "plan_name",
+,"custom": 1
+   "fieldtype": "Data",
+,"custom": 1
+   "in_list_view": 1,
+,"custom": 1
+   "label": "Plan Name",
+,"custom": 1
+   "reqd": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "is_active",
+,"custom": 1
+   "fieldtype": "Check",
+,"custom": 1
+   "in_list_view": 1,
+,"custom": 1
+   "label": "Active",
+,"custom": 1
+   "default": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "maintenance_limits",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Maintenance Limits"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "monthly_requests",
+,"custom": 1
+   "fieldtype": "Int",
+,"custom": 1
+   "label": "Monthly Maintenance Requests",
+,"custom": 1
+   "reqd": 1,
+,"custom": 1
+   "default": 5
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "extra_request_cost",
+,"custom": 1
+   "fieldtype": "Currency",
+,"custom": 1
+   "label": "Cost Per Extra Request",
+,"custom": 1
+   "default": 0
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "approval_settings",
+,"custom": 1
+   "fieldtype": "Section Break",
+,"custom": 1
+   "label": "Approval Settings"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "requires_owner_approval",
+,"custom": 1
+   "fieldtype": "Check",
+,"custom": 1
+   "label": "Requires Owner Approval (Over Limit)",
+,"custom": 1
+   "default": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "auto_deduct_enabled",
+,"custom": 1
+   "fieldtype": "Check",
+,"custom": 1
+   "label": "Auto-deduct from Pre-deposit Enabled",
+,"custom": 1
+   "default": 1
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "max_auto_deduct_amount",
+,"custom": 1
+   "fieldtype": "Currency",
+,"custom": 1
+   "label": "Max Auto-deduct Amount"
+,"custom": 1
+  },
+,"custom": 1
+  {
+,"custom": 1
+   "fieldname": "description",
+,"custom": 1
+   "fieldtype": "Text",
+,"custom": 1
+   "label": "Description"
+,"custom": 1
+  }
+,"custom": 1
+ ],
+,"custom": 1
+ "is_submittable": 0,
+,"custom": 1
+ "links": [],
+,"custom": 1
+ "module": "Rentclear",
+,"custom": 1
+ "name": "Subscription Plan",
+,"custom": 1
+ "owner": "Administrator",
+,"custom": 1
+ "permissions": [
+,"custom": 1
+  {
+,"custom": 1
+   "create": 1,
+,"custom": 1
+   "delete": 1,
+,"custom": 1
+   "email": 1,
+,"custom": 1
+   "export": 1,
+,"custom": 1
+   "print": 1,
+,"custom": 1
+   "read": 1,
+,"custom": 1
+   "report": 1,
+,"custom": 1
+   "role": "System Manager",
+,"custom": 1
+   "share": 1,
+,"custom": 1
+   "write": 1
+,"custom": 1
+  }
+,"custom": 1
+ ],
+,"custom": 1
+ "quick_entry": 1,
+,"custom": 1
+ "sort_field": "plan_name",
+,"custom": 1
+ "sort_order": "ASC",
+,"custom": 1
+ "title_field": "plan_name",
+,"custom": 1
+ "track_changes": 1
+,"custom": 1
+}
+,"custom": 1

@@ -1,33 +1,63 @@
-### Rentclear
+# Clearent - Property Rental Management
 
-Property Management
+Custom ERPNext application for property rental management system.
 
-### Installation
+## Features
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+- **Property Management**: Track properties with detailed information
+- **Property Units**: Manage individual units within properties
+- **Lease Agreements**: Handle tenant leases with all relevant details
+- **Maintenance Requests**: Track and manage maintenance issues
+- **Rent Payments**: Record and track rental payments
+- **Subscription Plans**: Define maintenance subscription tiers
+- **Customer KYC**: Enhanced customer records with KYC fields
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app rentclear
-```
-
-### Contributing
-
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+## Installation
 
 ```bash
-cd apps/rentclear
-pre-commit install
+# Get the app
+bench get-app https://github.com/xy-kashif/clearent-v1.git
+
+# Install the app
+bench install-app clearent
+
+# Run migrations
+bench migrate
+
+# Restart bench
+bench restart
 ```
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+## Requirements
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+- ERPNext v15+
+- Frappe Framework v15+
+- Python 3.10+
 
-### License
+## DocTypes Included
 
-mit
+- Property
+- Property Unit
+- Lease Agreement
+- Maintenance Request
+- Rent Payment
+- Subscription Plan
+
+## Customer Enhancements
+
+The app includes migration patches that add KYC fields to the Customer DocType:
+- Aadhar Number
+- PAN Number
+- GST Number
+- Company PAN
+- Director Name
+- Director Aadhar Number
+- Associated Properties (child table)
+
+## License
+
+MIT License
+
+## Support
+
+For issues or questions, please create an issue in this repository.

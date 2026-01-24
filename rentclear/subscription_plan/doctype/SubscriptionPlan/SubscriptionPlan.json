@@ -1,0 +1,12 @@
+{
+ "custom": 0,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "fields": [
+  {"fieldname": "plan_name", "fieldtype": "Data", "label": "Plan Name", "reqd": 1},
+  {"fieldname": "monthly_requests", "fieldtype": "Int", "label": "Monthly Requests", "default": 5}
+ ],
+ "module": "Rentclear",
+ "name": "Subscription Plan",
+ "permissions": [{"create": 1, "delete": 1, "read": 1, "write": 1, "role": "System Manager"}]
+}

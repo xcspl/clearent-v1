@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_events_in_timeline": 0,
+ "allow_guest_to_view": 0,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "PROP-.####",
+ "creation": "Creation",
+ "custom": 0,
+ "developer_mode_only": 0,
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "property_section",
+   "fieldtype": "Section Break",
+   "label": "Property Information"
+  },
+  {
+   "fieldname": "property_code",
+   "fieldtype": "Data",
+   "label": "Property Code",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "label": "Property Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Select",
+   "label": "Property Type",
+   "options": "Residential\nCommercial\nMixed\nIndustrial"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nPartially Occupied\nFully Occupied\nMaintenance\nInactive",
+   "default": "Available"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property_manager",
+   "fieldtype": "Link",
+   "label": "Property Manager",
+   "options": "User"
+  }
+ ],
+ "hide_toolbar": 0,
+ "icon": "octicon octicon-home",
+ "idx": 0,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "Creation",
+ "module": "Rentclear",
+ "name": "Property",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "read_only_onload": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "property_name",
+ "track_changes": 0,
+ "track_seen": 0,
+ "track_views": 0
+}

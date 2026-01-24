@@ -1,0 +1,15 @@
+{
+ "custom": 0,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "fields": [
+  {"fieldname": "lease_agreement", "fieldtype": "Link", "label": "Lease Agreement", "options": "Lease Agreement"},
+  {"fieldname": "tenant", "fieldtype": "Link", "label": "Tenant", "options": "Customer"},
+  {"fieldname": "payment_amount", "fieldtype": "Currency", "label": "Payment Amount"},
+  {"fieldname": "payment_date", "fieldtype": "Date", "label": "Payment Date"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Pending\nPaid"}
+ ],
+ "module": "Rentclear",
+ "name": "Rent Payment",
+ "permissions": [{"create": 1, "delete": 1, "read": 1, "write": 1, "role": "System Manager"}]
+}

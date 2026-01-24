@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-24 18:55:57.943022",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_pwvq",
+  "payment_id",
+  "lease_agreement",
+  "reference_section",
+  "tenant",
+  "prop_owner",
+  "property_unit",
+  "payment_details_section",
+  "payment_date",
+  "payment_amount",
+  "payment_status",
+  "column_break_vhim",
+  "due_amount",
+  "late_fee",
+  "deductions_section",
+  "maintenance_deducted",
+  "balance_deducted",
+  "net_amount",
+  "amended_from",
+  "section_break_dtxp",
+  "owner_commission",
+  "owner_payout",
+  "column_break_dqju",
+  "payout_status",
+  "analytics_section",
+  "days_late",
+  "payment_method"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_pwvq",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "payment_id",
+   "fieldtype": "Data",
+   "label": "Payment ID",
+   "no_copy": 1,
+   "options": "Rent Payment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "lease_agreement",
+   "fieldtype": "Link",
+   "label": "Lease Agreement",
+   "options": "Lease Agreement"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "prop_owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "property_unit",
+   "fieldtype": "Link",
+   "label": "Property Unit",
+   "options": "Property Unit"
+  },
+  {
+   "fieldname": "payment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "label": "Payment Amount"
+  },
+  {
+   "fieldname": "column_break_vhim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_amount",
+   "fieldtype": "Currency",
+   "label": "Due Amount"
+  },
+  {
+   "fieldname": "late_fee",
+   "fieldtype": "Currency",
+   "label": "Late Fee"
+  },
+  {
+   "fieldname": "deductions_section",
+   "fieldtype": "Section Break",
+   "label": "Deductions"
+  },
+  {
+   "fieldname": "maintenance_deducted",
+   "fieldtype": "Currency",
+   "label": "Maintenance Deducted"
+  },
+  {
+   "fieldname": "balance_deducted",
+   "fieldtype": "Currency",
+   "label": "Balance Deducted"
+  },
+  {
+   "fieldname": "net_amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount Received"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Payment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_dtxp",
+   "fieldtype": "Section Break",
+   "label": "Owner Payout"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Paid\nPending\nOverdue"
+  },
+  {
+   "fieldname": "owner_commission",
+   "fieldtype": "Select",
+   "label": "Owner Commission",
+   "options": "Paid\nPending\nOverdue"
+  },
+  {
+   "fieldname": "owner_payout",
+   "fieldtype": "Currency",
+   "label": "Owner Payout Amount"
+  },
+  {
+   "fieldname": "column_break_dqju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payout_status",
+   "fieldtype": "Select",
+   "label": "Payout Status",
+   "options": "Pending\nPaid\nTenant-Pending"
+  },
+  {
+   "fieldname": "analytics_section",
+   "fieldtype": "Section Break",
+   "label": "Analytics"
+  },
+  {
+   "fieldname": "days_late",
+   "fieldtype": "Int",
+   "label": "Days Late"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "UPI\nCash\nCheque\nCredit Card\nDebit Card\nBank Transfer"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-24 19:07:53.504416",
+ "modified_by": "Administrator",
+ "module": "Rentclear",
+ "name": "Rent Payment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
