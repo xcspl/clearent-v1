@@ -27,7 +27,7 @@
    "fieldname": "contact",
    "fieldtype": "Link",
    "label": "Contact",
-   "options": "Rentclear Worker"
+   "options": "Clearent member"
   },
   {
    "fieldname": "employee_id",
@@ -106,7 +106,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-25 13:44:16.651201",
+ "modified": "2026-01-25 16:08:45.727470",
  "modified_by": "Administrator",
  "module": "Rentclear",
  "name": "Property Manager Profile",
