@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-25 13:39:45.843651",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "info_section",
+  "contact",
+  "employee_id",
+  "joining_date",
+  "column_break_gmfz",
+  "status",
+  "total_properties_managed",
+  "emergency_contact",
+  "section_break_msuq",
+  "assigned_properties",
+  "section_break_hwbf",
+  "commission_percent",
+  "performance_score",
+  "qualifications",
+  "column_break_ewhp",
+  "bank_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Rentclear Worker"
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": "Employee ID"
+  },
+  {
+   "fieldname": "joining_date",
+   "fieldtype": "Date",
+   "label": "Joining Date"
+  },
+  {
+   "fieldname": "column_break_gmfz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nIn-Active\nOn Leave"
+  },
+  {
+   "fieldname": "info_section",
+   "fieldtype": "Section Break",
+   "label": "Info"
+  },
+  {
+   "fieldname": "total_properties_managed",
+   "fieldtype": "Int",
+   "label": "Total Properties Managed"
+  },
+  {
+   "fieldname": "emergency_contact",
+   "fieldtype": "Data",
+   "label": "Emergency Contact"
+  },
+  {
+   "fieldname": "section_break_msuq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assigned_properties",
+   "fieldtype": "Table",
+   "label": "Assigned Properties",
+   "options": "Manager Properties"
+  },
+  {
+   "fieldname": "section_break_hwbf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commission_percent",
+   "fieldtype": "Percent",
+   "label": "Commission Percent"
+  },
+  {
+   "fieldname": "performance_score",
+   "fieldtype": "Int",
+   "label": "Performance Score"
+  },
+  {
+   "fieldname": "qualifications",
+   "fieldtype": "Small Text",
+   "label": "Qualifications"
+  },
+  {
+   "fieldname": "column_break_ewhp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_details",
+   "fieldtype": "Small Text",
+   "label": "Bank Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-25 13:44:16.651201",
+ "modified_by": "Administrator",
+ "module": "Rentclear",
+ "name": "Property Manager Profile",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

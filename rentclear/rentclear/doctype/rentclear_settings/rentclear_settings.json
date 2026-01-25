@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-25 13:45:11.632963",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_property_manager_role",
+  "default_maintenance_allowance",
+  "column_break_epzx",
+  "maintenance_approval_required",
+  "auto_deduct_maintenance",
+  "commission_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_property_manager_role",
+   "fieldtype": "Link",
+   "label": "Default Property Manager role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "default_maintenance_allowance",
+   "fieldtype": "Int",
+   "label": "Default Maintenance Allowance"
+  },
+  {
+   "fieldname": "column_break_epzx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "maintenance_approval_required",
+   "fieldtype": "Check",
+   "label": "Maintenance Approval Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_deduct_maintenance",
+   "fieldtype": "Check",
+   "label": "Auto Deduct Maintenance"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Percent",
+   "label": "Commission rate"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-01-25 13:47:07.213384",
+ "modified_by": "Administrator",
+ "module": "Rentclear",
+ "name": "Rentclear Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

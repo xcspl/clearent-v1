@@ -1,0 +1,214 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-25 01:56:43.188859",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_profile_section",
+  "erpnext_customer",
+  "customer_type",
+  "is_property_owner",
+  "is_tenant",
+  "kyc_section",
+  "aadhar_number",
+  "aadhar_document",
+  "column_break_kbcf",
+  "pan_number",
+  "pan_document",
+  "company_information_section",
+  "gst_number",
+  "gst_certificate",
+  "company_pan_number",
+  "column_break_dkqh",
+  "company_id_type",
+  "company_id_number",
+  "company_id",
+  "director_kyc_section",
+  "director_name",
+  "director_aadhar_number",
+  "director_aadhar_document",
+  "section_break_pgfp",
+  "kyc_verified",
+  "kyc_verification_date",
+  "notes",
+  "section_break_krij",
+  "table_cwej"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_profile_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Profile"
+  },
+  {
+   "fieldname": "erpnext_customer",
+   "fieldtype": "Link",
+   "label": "ERPnext Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "Individual\nCompany\nPartnership\nProprietorship"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_property_owner",
+   "fieldtype": "Check",
+   "label": "Is Property Owner"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_tenant",
+   "fieldtype": "Check",
+   "label": "Is tenant"
+  },
+  {
+   "fieldname": "kyc_section",
+   "fieldtype": "Section Break",
+   "label": "Individual KYC"
+  },
+  {
+   "fieldname": "aadhar_number",
+   "fieldtype": "Data",
+   "label": "Aadhar Number"
+  },
+  {
+   "fieldname": "aadhar_document",
+   "fieldtype": "Attach",
+   "label": "Aadhar Document"
+  },
+  {
+   "fieldname": "column_break_kbcf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN number"
+  },
+  {
+   "fieldname": "pan_document",
+   "fieldtype": "Attach",
+   "label": "PAN document"
+  },
+  {
+   "fieldname": "company_information_section",
+   "fieldtype": "Section Break",
+   "label": "Company Information"
+  },
+  {
+   "fieldname": "gst_number",
+   "fieldtype": "Data",
+   "label": "GST number"
+  },
+  {
+   "fieldname": "gst_certificate",
+   "fieldtype": "Attach",
+   "label": "GST Certificate"
+  },
+  {
+   "fieldname": "company_pan_number",
+   "fieldtype": "Data",
+   "label": "Company PAN Number"
+  },
+  {
+   "fieldname": "column_break_dkqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_id_type",
+   "fieldtype": "Select",
+   "label": "Company ID Type",
+   "options": "Incorporation Certificate\nTrade License\nMSME Certificate"
+  },
+  {
+   "fieldname": "company_id_number",
+   "fieldtype": "Data",
+   "label": "Company ID Number"
+  },
+  {
+   "fieldname": "company_id",
+   "fieldtype": "Attach",
+   "label": "Company ID "
+  },
+  {
+   "fieldname": "director_kyc_section",
+   "fieldtype": "Section Break",
+   "label": "Director KYC"
+  },
+  {
+   "fieldname": "director_name",
+   "fieldtype": "Data",
+   "label": "Director Name"
+  },
+  {
+   "fieldname": "director_aadhar_number",
+   "fieldtype": "Data",
+   "label": "Director Aadhar Number"
+  },
+  {
+   "fieldname": "director_aadhar_document",
+   "fieldtype": "Attach",
+   "label": "Director aadhar document"
+  },
+  {
+   "fieldname": "section_break_pgfp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "kyc_verified",
+   "fieldtype": "Check",
+   "label": "KYC Verified"
+  },
+  {
+   "fieldname": "kyc_verification_date",
+   "fieldtype": "Date",
+   "label": "KYC Verification date"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "section_break_krij",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_cwej",
+   "fieldtype": "Table",
+   "options": "Associated Properties"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-25 13:38:05.041700",
+ "modified_by": "Administrator",
+ "module": "Rentclear",
+ "name": "Rentclear Customer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
