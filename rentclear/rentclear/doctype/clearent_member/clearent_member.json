@@ -74,10 +74,10 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-25 16:04:17.650086",
+ "modified": "2026-01-25 16:12:25.225531",
  "modified_by": "Administrator",
  "module": "Rentclear",
- "name": "Clearent Member",
+ "name": "Clearent member",
  "owner": "Administrator",
  "permissions": [
   {
@@ -97,6 +97,5 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "custom": 0
+ "states": []
 }

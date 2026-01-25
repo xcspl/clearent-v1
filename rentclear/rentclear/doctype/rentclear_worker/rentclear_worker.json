@@ -83,7 +83,7 @@
  "modified": "2026-01-25 15:45:39.576949",
  "modified_by": "Administrator",
  "module": "Rentclear",
- "name": "Rentclear Worker",
+ "name": "rentclear worker",
  "owner": "Administrator",
  "permissions": [
   {
@@ -103,6 +103,5 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "custom": 0
+ "states": []
 }
