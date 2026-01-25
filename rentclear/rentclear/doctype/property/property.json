@@ -1,11 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-22 00:52:21.183500",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_57yc",
+  "naming_series",
   "property_name",
   "property_code",
   "owner_information_section",
@@ -16,9 +18,15 @@
   "manager_assigned_on",
   "property_details_section",
   "address",
+  "city",
+  "state",
+  "pincode",
+  "landmark",
+  "column_break_aiqm",
   "property_type",
   "total_units",
-  "total_area",
+  "built_up_area",
+  "carpet_area",
   "analytics_section",
   "status",
   "occupancy_rate",
@@ -47,7 +55,6 @@
    "fieldname": "property_code",
    "fieldtype": "Data",
    "label": "Property Code",
-   "reqd": 1,
    "unique": 1
   },
   {
@@ -75,7 +82,7 @@
    "fieldname": "property_manager",
    "fieldtype": "Link",
    "label": "Property manager",
-   "options": "User"
+   "options": "Clearent member"
   },
   {
    "fieldname": "manager_assigned_on",
@@ -103,11 +110,6 @@
    "fieldname": "total_units",
    "fieldtype": "Int",
    "label": "Total Units"
-  },
-  {
-   "fieldname": "total_area",
-   "fieldtype": "Float",
-   "label": "Total Area"
   },
   {
    "fieldname": "analytics_section",
@@ -160,15 +162,58 @@
    "fieldname": "total_maintenance_count",
    "fieldtype": "Int",
    "label": "Total Maintenance Requests"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "landmark",
+   "fieldtype": "Data",
+   "label": "Landmark"
+  },
+  {
+   "fieldname": "column_break_aiqm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "built_up_area",
+   "fieldtype": "Float",
+   "label": "Built up Area"
+  },
+  {
+   "fieldname": "carpet_area",
+   "fieldtype": "Data",
+   "label": "Carpet Area"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Property naming series",
+   "no_copy": 1,
+   "options": "PROP-.YYYY.-",
+   "set_only_once": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-25 15:08:38.707474",
+ "modified": "2026-01-25 17:15:55.529498",
  "modified_by": "Administrator",
  "module": "Rentclear",
  "name": "Property",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

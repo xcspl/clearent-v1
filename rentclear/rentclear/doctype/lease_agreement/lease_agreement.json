@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-24 18:44:36.536636",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_efub",
-  "amended_from",
+  "naming_series",
   "property",
   "property_unit",
   "column_break_cvct",
@@ -29,27 +30,19 @@
   "auto_deduct_maintenance",
   "owner_approval_required",
   "section_break_kmqu",
-  "stuatus",
+  "status",
   "total_rent_collected",
   "ontime_payment_rate",
   "column_break_hxbc",
   "maintenance_count",
-  "lease_score"
+  "lease_score",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "section_break_efub",
    "fieldtype": "Section Break",
    "label": "Identity and Parties"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Data",
-   "label": "Agreement ID",
-   "no_copy": 1,
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
   },
   {
    "fieldname": "property",
@@ -164,12 +157,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "stuatus",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Draft\nActive\nExpired\nCancelled"
-  },
-  {
    "fieldname": "total_rent_collected",
    "fieldtype": "Currency",
    "label": "Total Rent Collected"
@@ -192,16 +179,43 @@
    "fieldname": "lease_score",
    "fieldtype": "Int",
    "label": "Lease Score"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nExpired\nCancelled"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Agreement ID",
+   "no_copy": 1,
+   "options": "RENTAG-.YYYY-",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Lease Agreement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-24 18:55:07.308975",
+ "modified": "2026-01-25 20:58:14.594846",
  "modified_by": "Administrator",
  "module": "Rentclear",
  "name": "Lease Agreement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

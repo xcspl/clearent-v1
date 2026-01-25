@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-01-23 19:06:12.508035",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,6 +10,7 @@
   "unit_code",
   "property",
   "unit_owner",
+  "naming_series",
   "unit_details_section",
   "unit_number",
   "unit_type",
@@ -43,7 +45,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Unit Code",
-   "reqd": 1,
    "search_index": 1
   },
   {
@@ -164,22 +165,31 @@
    "fieldname": "property_manager",
    "fieldtype": "Link",
    "label": "Property Manager",
-   "options": "User"
+   "options": "Clearent member"
   },
   {
    "fieldname": "active_maintenance",
    "fieldtype": "Table",
    "label": "Active maintenance",
    "options": "Maintenance Request"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Unit Naming Series",
+   "no_copy": 1,
+   "options": "UNIT-.YYYY-",
+   "set_only_once": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-25 15:08:46.857726",
+ "modified": "2026-01-25 17:14:53.582749",
  "modified_by": "Administrator",
  "module": "Rentclear",
  "name": "Property Unit",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
