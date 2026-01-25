@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-23 19:06:12.508035",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "identity_section",
+  "unit_code",
+  "property",
+  "unit_owner",
+  "unit_details_section",
+  "unit_number",
+  "unit_type",
+  "floor",
+  "area",
+  "financials_section",
+  "rent_amount",
+  "maintenance_charge",
+  "security_deposit",
+  "status_and_analytics_section",
+  "status",
+  "furnishing",
+  "current_tenant",
+  "current_lease",
+  "column_break_rtzm",
+  "days_vacant",
+  "total_rental_income",
+  "maintenance_count",
+  "unit_health_score",
+  "section_break_luum",
+  "property_manager",
+  "active_maintenance"
+ ],
+ "fields": [
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "unit_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit Code",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fieldname": "unit_owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "unit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Unit Details"
+  },
+  {
+   "fieldname": "unit_number",
+   "fieldtype": "Data",
+   "label": "Unit Number"
+  },
+  {
+   "fieldname": "unit_type",
+   "fieldtype": "Select",
+   "label": "Unit Type",
+   "options": "1RK\nStudio\n1BHK\n2BHK\n3BHK\n4BHK\n5BHK"
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Int",
+   "label": "Floor"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "label": "Area"
+  },
+  {
+   "fieldname": "financials_section",
+   "fieldtype": "Section Break",
+   "label": "Financials"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "maintenance_charge",
+   "fieldtype": "Currency",
+   "label": "Maintenance Charge"
+  },
+  {
+   "fieldname": "security_deposit",
+   "fieldtype": "Currency",
+   "label": "Security Deposit"
+  },
+  {
+   "fieldname": "status_and_analytics_section",
+   "fieldtype": "Section Break",
+   "label": "Status and Analytics"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nOccupied\nIn-Maintenance"
+  },
+  {
+   "fieldname": "furnishing",
+   "fieldtype": "Select",
+   "label": "Furnishing Status",
+   "options": "Fully\nSemi\nUn"
+  },
+  {
+   "fieldname": "current_tenant",
+   "fieldtype": "Link",
+   "label": "Current Tenant",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "current_lease",
+   "fieldtype": "Data",
+   "label": "Current Lease"
+  },
+  {
+   "fieldname": "column_break_rtzm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "days_vacant",
+   "fieldtype": "Int",
+   "label": "Days Vacant"
+  },
+  {
+   "fieldname": "total_rental_income",
+   "fieldtype": "Currency",
+   "label": "Total Rental Income"
+  },
+  {
+   "fieldname": "maintenance_count",
+   "fieldtype": "Int",
+   "label": "Maintenance Request Count"
+  },
+  {
+   "fieldname": "unit_health_score",
+   "fieldtype": "Int",
+   "label": "Unit Health Score"
+  },
+  {
+   "fieldname": "section_break_luum",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "property_manager",
+   "fieldtype": "Link",
+   "label": "Property Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "active_maintenance",
+   "fieldtype": "Table",
+   "label": "Active maintenance",
+   "options": "Maintenance Request"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-25 15:08:46.857726",
+ "modified_by": "Administrator",
+ "module": "Rentclear",
+ "name": "Property Unit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

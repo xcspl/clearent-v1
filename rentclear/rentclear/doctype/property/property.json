@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-22 00:52:21.183500",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_57yc",
+  "property_name",
+  "property_code",
+  "owner_information_section",
+  "prop_owner",
+  "owner_commission",
+  "property_manager_section",
+  "property_manager",
+  "manager_assigned_on",
+  "property_details_section",
+  "address",
+  "property_type",
+  "total_units",
+  "total_area",
+  "analytics_section",
+  "status",
+  "occupancy_rate",
+  "avg_rent_sqft",
+  "avg_rent_sqm",
+  "maintenance_cost_ytd",
+  "last_maintenance_count",
+  "links_section",
+  "active_maintenance_req",
+  "total_maintenance_count"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_57yc",
+   "fieldtype": "Section Break",
+   "label": "Identity"
+  },
+  {
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property_code",
+   "fieldtype": "Data",
+   "label": "Property Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "owner_information_section",
+   "fieldtype": "Section Break",
+   "label": "Owner Information"
+  },
+  {
+   "fieldname": "prop_owner",
+   "fieldtype": "Link",
+   "label": "Prop Owner",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "owner_commission",
+   "fieldtype": "Percent",
+   "label": "Owner Commission"
+  },
+  {
+   "fieldname": "property_manager_section",
+   "fieldtype": "Section Break",
+   "label": "Property manager"
+  },
+  {
+   "fieldname": "property_manager",
+   "fieldtype": "Link",
+   "label": "Property manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "manager_assigned_on",
+   "fieldtype": "Date",
+   "label": "Manager Assign Date"
+  },
+  {
+   "fieldname": "property_details_section",
+   "fieldtype": "Section Break",
+   "label": "Property Details"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Select",
+   "label": "Property Type",
+   "options": "Appartment\nVilla\nPG\nCommercial\nOffice\nShop"
+  },
+  {
+   "fieldname": "total_units",
+   "fieldtype": "Int",
+   "label": "Total Units"
+  },
+  {
+   "fieldname": "total_area",
+   "fieldtype": "Float",
+   "label": "Total Area"
+  },
+  {
+   "fieldname": "analytics_section",
+   "fieldtype": "Section Break",
+   "label": "Analytics"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nOccupied\nMaintenance\nInactive"
+  },
+  {
+   "fieldname": "occupancy_rate",
+   "fieldtype": "Percent",
+   "label": "Occupancy Rate"
+  },
+  {
+   "fieldname": "avg_rent_sqft",
+   "fieldtype": "Currency",
+   "label": "Avarage Rent per SqFt"
+  },
+  {
+   "fieldname": "avg_rent_sqm",
+   "fieldtype": "Currency",
+   "label": "Average Rent per SqM"
+  },
+  {
+   "fieldname": "maintenance_cost_ytd",
+   "fieldtype": "Currency",
+   "label": "Maintenance Cost YTD"
+  },
+  {
+   "fieldname": "last_maintenance_count",
+   "fieldtype": "Date",
+   "label": "Last Maintenance Date"
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "Links"
+  },
+  {
+   "fieldname": "active_maintenance_req",
+   "fieldtype": "Link",
+   "label": "Active Maintenance",
+   "options": "Issue"
+  },
+  {
+   "fieldname": "total_maintenance_count",
+   "fieldtype": "Int",
+   "label": "Total Maintenance Requests"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-25 15:08:38.707474",
+ "modified_by": "Administrator",
+ "module": "Rentclear",
+ "name": "Property",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
