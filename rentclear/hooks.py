@@ -8,6 +8,17 @@ app_license = "mit"
 # Apps
 # ------------------
 
+fixtures = [
+	{
+		"doctype": "Server Script",
+		"filters": [["module", "=", "Rentclear"]]
+	},
+	{
+		"doctype": "Client Script",
+		"filters": [["module", "=", "Rentclear"]]
+	}
+]
+
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
