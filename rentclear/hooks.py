@@ -258,10 +258,9 @@ add_to_apps_screen = [
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
-home_page = "rentclear"
-
-# Home Page
-home_page = "rentclear"
+# Website home page — "login" serves login at root for guests.
+# Desk redirect after login defaults to /desk.
+# home_page = "rentclear"  # was causing 404 on / (not a valid website route)
 
 # Pages
 pages = [
