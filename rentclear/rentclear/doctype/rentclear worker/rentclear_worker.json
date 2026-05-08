@@ -83,7 +83,7 @@
  "modified": "2026-01-25 15:45:39.576949",
  "modified_by": "Administrator",
  "module": "Rentclear",
- "name": "rentclear worker",
+ "name": "Rentclear Worker",
  "owner": "Administrator",
  "permissions": [
   {

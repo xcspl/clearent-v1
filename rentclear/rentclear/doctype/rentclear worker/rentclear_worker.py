@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class rentclear_worker(Document):
+class RentclearWorker(Document):
 	pass
