@@ -1,20 +1,240 @@
 {
- "allow_copy": 1,
- "custom": 0,
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-01-24 18:44:36.536636",
  "doctype": "DocType",
- "document_type": "Document",
  "engine": "InnoDB",
- "fields": [
-  {"fieldname": "property", "fieldtype": "Link", "label": "Property", "options": "Property", "reqd": 1},
-  {"fieldname": "property_unit", "fieldtype": "Link", "label": "Property Unit", "options": "Property Unit", "reqd": 1},
-  {"fieldname": "tenant", "fieldtype": "Link", "label": "Tenant", "options": "Customer", "reqd": 1},
-  {"fieldname": "start_date", "fieldtype": "Date", "label": "Start Date", "reqd": 1},
-  {"fieldname": "end_date", "fieldtype": "Date", "label": "End Date"},
-  {"fieldname": "rent_amount", "fieldtype": "Currency", "label": "Rent Amount", "reqd": 1},
-  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Draft\nActive\nExpired"}
+ "field_order": [
+  "section_break_efub",
+  "naming_series",
+  "property",
+  "property_unit",
+  "column_break_cvct",
+  "prop_owner",
+  "tenant",
+  "dates_section",
+  "agreement_date",
+  "start_date",
+  "end_date",
+  "financials_section",
+  "rent_amount",
+  "payment_due_day",
+  "column_break_utee",
+  "security_deposit",
+  "maintenance_charge",
+  "section_break_zbuj",
+  "maintenance_allowed",
+  "requests_used",
+  "column_break_yfgz",
+  "auto_deduct_maintenance",
+  "owner_approval_required",
+  "section_break_kmqu",
+  "status",
+  "total_rent_collected",
+  "ontime_payment_rate",
+  "column_break_hxbc",
+  "maintenance_count",
+  "lease_score",
+  "amended_from"
  ],
+ "fields": [
+  {
+   "fieldname": "section_break_efub",
+   "fieldtype": "Section Break",
+   "label": "Identity and Parties"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fieldname": "property_unit",
+   "fieldtype": "Link",
+   "label": "Property Unit",
+   "options": "Property Unit"
+  },
+  {
+   "fieldname": "column_break_cvct",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prop_owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "dates_section",
+   "fieldtype": "Section Break",
+   "label": "Dates"
+  },
+  {
+   "fieldname": "agreement_date",
+   "fieldtype": "Date",
+   "label": "Agreement Date"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "financials_section",
+   "fieldtype": "Section Break",
+   "label": "Financials"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "payment_due_day",
+   "fieldtype": "Int",
+   "label": "Payment Due Day"
+  },
+  {
+   "fieldname": "column_break_utee",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "security_deposit",
+   "fieldtype": "Currency",
+   "label": "Security Deposit"
+  },
+  {
+   "fieldname": "maintenance_charge",
+   "fieldtype": "Currency",
+   "label": "Maintenance Charge Monthly"
+  },
+  {
+   "fieldname": "section_break_zbuj",
+   "fieldtype": "Section Break",
+   "label": "Subscription and Maintenance"
+  },
+  {
+   "fieldname": "maintenance_allowed",
+   "fieldtype": "Int",
+   "label": "Maintenance Requests Allowed"
+  },
+  {
+   "fieldname": "requests_used",
+   "fieldtype": "Int",
+   "label": "Requests Used"
+  },
+  {
+   "fieldname": "column_break_yfgz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_deduct_maintenance",
+   "fieldtype": "Check",
+   "label": "Auto Deduct Maintenance"
+  },
+  {
+   "default": "0",
+   "fieldname": "owner_approval_required",
+   "fieldtype": "Check",
+   "label": "Owner Approval Required"
+  },
+  {
+   "fieldname": "section_break_kmqu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_rent_collected",
+   "fieldtype": "Currency",
+   "label": "Total Rent Collected"
+  },
+  {
+   "fieldname": "ontime_payment_rate",
+   "fieldtype": "Percent",
+   "label": "On-time Payment Rate"
+  },
+  {
+   "fieldname": "column_break_hxbc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_count",
+   "fieldtype": "Int",
+   "label": "Maintenance Request Count"
+  },
+  {
+   "fieldname": "lease_score",
+   "fieldtype": "Int",
+   "label": "Lease Score"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nExpired\nCancelled"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Agreement ID",
+   "no_copy": 1,
+   "options": "RENTAG-.YYYY-",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Lease Agreement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
  "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-25 20:58:14.594846",
+ "modified_by": "Administrator",
  "module": "Rentclear",
  "name": "Lease Agreement",
- "permissions": [{"create": 1, "delete": 1, "read": 1, "role": "System Manager", "submit": 1, "write": 1}]
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
 }
