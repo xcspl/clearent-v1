@@ -101,8 +101,7 @@ def _add_api_methods(spec):
 		# Also add clearent.api.* alias
 		clearent_path = path.replace("rentclear.api.", "clearent.api.")
 		if clearent_path != path:
-			op["tags"] = [tag + " (legacy)"]
-			spec["paths"].setdefault(f"/api/method/{clearent_path}", {})[method.lower()] = op
+			spec["paths"].setdefault(f"/api/method/{clearent_path}", {})[method.lower()] = dict(op)
 
 
 def _add_doctype_crud(spec):
