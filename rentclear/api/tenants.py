@@ -99,6 +99,50 @@ def get_property_tenants(property_id: str):
 
 
 @frappe.whitelist()
+def search_tenants(search: str = "", search_field: str = "email_id"):
+	"""Search Rentclear Customers by ERPNext Customer fields (email, phone, name).
+	Returns Rentclear Customer records with flattened Customer details."""
+	valid_fields = {"email_id", "mobile_no", "phone", "customer_name"}
+	if search_field not in valid_fields:
+		frappe.throw(_("Invalid search_field. Valid: {0}").format(", ".join(valid_fields)))
+
+	if not search:
+		return []
+
+	# Find matching ERPNext Customers
+	customers = frappe.get_all("Customer",
+		filters={search_field: ("like", f"%{search}%")},
+		fields=["name", "customer_name", "email_id", "mobile_no", "phone"],
+		limit=50)
+
+	if not customers:
+		return []
+
+	customer_names = [c.name for c in customers]
+	customer_map = {c.name: c for c in customers}
+
+	# Find matching Rentclear Customers
+	rc_list = frappe.get_all("Rentclear Customer",
+		filters={"erpnext_customer": ("in", customer_names)},
+		fields=["name", "erpnext_customer", "customer_type", "is_tenant",
+			"is_property_owner", "aadhar_number", "pan_number", "kyc_verified"])
+
+	result = []
+	for rc in rc_list:
+		cust = customer_map.get(rc.erpnext_customer)
+		if cust:
+			rc.update({
+				"customer_name": cust.customer_name,
+				"email_id": cust.email_id,
+				"mobile_no": cust.mobile_no,
+				"phone": cust.phone,
+			})
+		result.append(rc)
+
+	return result
+
+
+@frappe.whitelist()
 def create_tenant_with_agreement(**data):
 	"""Create a tenant (Customer + Rentclear Customer) and a lease agreement in one call."""
 	customer_name = data.get("customer_name")
