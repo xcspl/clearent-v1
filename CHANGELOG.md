@@ -84,5 +84,18 @@ bench restart
 ```
 The 6 API methods (`get_owner_dashboard_stats`, `get_property_units_summary`, `get_property_tenants`, `get_maintenance_summary`, `create_tenant_with_agreement`, `onboard_customer_with_kyc`) exist as Server Scripts in the database (module: "Rentclear") but were disabled server-wide.
 
-**Fix 3 — `clearent.api.*` namespace 417 (PENDING)**:
-Frontend calls `clearent.api.*` but no `clearent` app is installed. The app was renamed to `rentclear` during development. Need to either create shim functions or add `override_whitelisted_methods` in hooks.py. Not yet fixed.
+**Fix 3 — `clearent.api.*` namespace 417**:
+Created `rentclear/api/` with proper Python API modules replacing all 6 Server Scripts:
+- `dashboard.py`: `get_dashboard_data`
+- `tenants.py`: `send_reminder`, `add_note`, `get_property_tenants`, `create_tenant_with_agreement`, `search_tenants`
+- `customers.py`: `onboard_with_kyc`
+- `properties.py`: `get_units_summary`
+- `documents.py`: `update_status`
+
+Added `override_whitelisted_methods` in `hooks.py` mapping all `clearent.api.*` → `rentclear.api.*` for backward compat. Both namespaces work.
+
+**Server Scripts made redundant**:
+Removed `server_script.json` fixture. Deleted Server Script records from DB. All business logic now in version-controlled Python modules.
+
+**Dynamic OpenAPI spec**:
+Added `rentclear/api/openapi.py` with `@frappe.whitelist(allow_guest=True) get_spec()`. Auto-generates OpenAPI 3.0 spec from registered endpoints and doctypes. Cached in Redis. Served at `/api/method/rentclear.api.openapi.get_spec`.
