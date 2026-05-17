@@ -10,14 +10,18 @@ app_license = "mit"
 
 fixtures = [
 	{
-		"doctype": "Server Script",
-		"filters": [["module", "=", "Rentclear"]]
-	},
-	{
 		"doctype": "Client Script",
 		"filters": [["module", "=", "Rentclear"]]
 	}
 ]
+
+# Map legacy clearent.api.* calls to rentclear.api.*
+override_whitelisted_methods = {
+	"clearent.api.dashboard.get_dashboard_data": "rentclear.api.dashboard.get_dashboard_data",
+	"clearent.api.tenants.send_reminder": "rentclear.api.tenants.send_reminder",
+	"clearent.api.tenants.add_note": "rentclear.api.tenants.add_note",
+	"clearent.api.documents.update_status": "rentclear.api.documents.update_status",
+}
 
 # required_apps = []
 
