@@ -58,11 +58,15 @@ def signup(email: str, full_name: str, mobile_no: str = ""):
 
 @frappe.whitelist()
 def onboard_with_kyc(**data):
-	"""One-step customer onboarding with KYC. Wraps the onboard_customer_with_kyc server script."""
+	"""One-step customer onboarding with KYC. Auto-creates User if needed."""
 	customer_name = data.get("customer_name")
 	customer_type = data.get("customer_type", "Individual")
+	email_id = data.get("email_id")
+
 	if not customer_name:
 		frappe.throw(_("customer_name is required"))
+	if not email_id:
+		frappe.throw(_("email_id is required"))
 
 	if customer_type == "Individual":
 		if not data.get("aadhar_number"):
@@ -70,8 +74,7 @@ def onboard_with_kyc(**data):
 		if not data.get("pan_number"):
 			frappe.throw(_("pan_number is required for Individual"))
 
-	# Auto-create User if email is provided and no user exists
-	email_id = data.get("email_id")
+	# Auto-create User if no user exists for this email
 	if email_id and not frappe.db.exists("User", {"email": email_id}):
 		user = frappe.new_doc("User")
 		user.email = email_id
