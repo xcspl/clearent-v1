@@ -70,6 +70,8 @@ def _add_api_methods(spec):
 		("rentclear.api.properties.get_units_summary", "GET", "Properties",
 			"Get property units grouped by status", [("property_id", "str")]),
 		# Customers
+		("rentclear.api.customers.signup", "POST", "Customers",
+		"Create User + Customer in one step. OTP verifies email.", [("email", "str"), ("full_name", "str"), ("mobile_no", "str")]),
 		("rentclear.api.customers.onboard_with_kyc", "POST", "Customers",
 			"One-step customer onboarding with KYC", []),
 		# Documents

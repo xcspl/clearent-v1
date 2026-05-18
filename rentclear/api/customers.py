@@ -2,6 +2,60 @@ import frappe
 from frappe import _
 
 
+@frappe.whitelist(allow_guest=True)
+def signup(email: str, full_name: str, mobile_no: str = ""):
+	"""Create User + Customer in one step. Every User gets a Customer.
+
+	Returns the OTP flow — user verifies email by logging in via OTP.
+	"""
+	email = email.strip().lower()
+	if not email or not full_name:
+		frappe.throw(_("email and full_name are required"))
+
+	if frappe.db.exists("User", {"email": email}):
+		frappe.throw(_("A user with this email already exists"), frappe.DuplicateEntryError)
+
+	# 1. Create User
+	user = frappe.new_doc("User")
+	user.email = email
+	user.first_name = full_name
+	user.enabled = 1
+	user.user_type = "Website User"
+	user.send_welcome_email = 0
+	user.flags.ignore_password_policy = True
+	user.insert(ignore_permissions=True)
+
+	# 2. Add Customer role
+	user.add_roles("Customer")
+	frappe.db.commit()
+
+	# 3. Create Customer
+	customer = frappe.new_doc("Customer")
+	customer.customer_name = full_name
+	customer.customer_type = "Individual"
+	customer.email_id = email
+	customer.mobile_no = mobile_no
+	customer.flags.ignore_mandatory = True
+	customer.insert(ignore_permissions=True)
+
+	# 4. Create Contact linked to Customer
+	contact = frappe.new_doc("Contact")
+	contact.first_name = full_name
+	contact.email_id = email
+	contact.mobile_no = mobile_no
+	contact.append("email_ids", {"email_id": email, "is_primary": 1})
+	contact.append("links", {"link_doctype": "Customer", "link_name": customer.name})
+	contact.flags.ignore_mandatory = True
+	contact.insert(ignore_permissions=True)
+
+	return {
+		"user": user.name,
+		"customer": customer.name,
+		"customer_id": customer.name,
+		"message": "Account created. Verify your email by logging in via OTP.",
+	}
+
+
 @frappe.whitelist()
 def onboard_with_kyc(**data):
 	"""One-step customer onboarding with KYC. Wraps the onboard_customer_with_kyc server script."""
@@ -16,13 +70,27 @@ def onboard_with_kyc(**data):
 		if not data.get("pan_number"):
 			frappe.throw(_("pan_number is required for Individual"))
 
+	# Auto-create User if email is provided and no user exists
+	email_id = data.get("email_id")
+	if email_id and not frappe.db.exists("User", {"email": email_id}):
+		user = frappe.new_doc("User")
+		user.email = email_id
+		user.first_name = customer_name
+		user.enabled = 1
+		user.user_type = "Website User"
+		user.send_welcome_email = 0
+		user.flags.ignore_password_policy = True
+		user.insert(ignore_permissions=True)
+		user.add_roles("Customer")
+		frappe.db.commit()
+
 	# Create ERPNext Customer
 	customer = frappe.new_doc("Customer")
 	customer.customer_name = customer_name
 	customer.customer_type = customer_type
 	customer.salutation = data.get("salutation")
 	customer.gender = data.get("gender")
-	customer.email_id = data.get("email_id")
+	customer.email_id = email_id
 	customer.mobile_no = data.get("mobile_no")
 	customer.phone = data.get("phone")
 	customer.customer_group = "Individual"
